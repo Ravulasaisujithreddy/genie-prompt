@@ -9,16 +9,20 @@ function Dialogbox({theme,setTheme}) {
     document.body.classList.toggle("dark-theme", val);
     
   };
-    useEffect(()=>{
-      if (theme === "Dark") {
-        darkThemeLink.disabled = false;
-        lightThemeLink.disabled = true;
-      } else {
-        darkThemeLink.disabled = true;
-        lightThemeLink.disabled = false;
-      }
-      //console.log(`Theme is :${theme}`)
-    },[theme])
+  useEffect(() => {
+    const darkThemeLink = document.getElementById('dark-theme');
+    const lightThemeLink = document.getElementById('light-theme');
+    
+    if (darkThemeLink && lightThemeLink) {
+        if (theme === "Dark") {
+            darkThemeLink.disabled = false;
+            lightThemeLink.disabled = true;
+        } else {
+            darkThemeLink.disabled = true;
+            lightThemeLink.disabled = false;
+        }
+    }
+}, [theme]);
    
 
   return (
