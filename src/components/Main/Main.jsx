@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState ,useEffect} from 'react'
 import "./Main.css"
 import { assets } from '../../assets/assets'
 import { dataContext } from '../../Context/Context'
-import Genie from '../Genie/genie'
+import Genie from '../Genie/Genie'
 
 function Main() {
   
