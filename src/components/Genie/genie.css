@@ -1,0 +1,77 @@
+/* Light Theme (Default) */
+:root {
+    --background-color: #c4c7c5;
+    --text-color: #585858;
+    --border-color: #ccc;
+    --button-active-bg: #585858;
+    --button-active-text: white;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background-color: #2b2b2b;
+    --text-color: #d1d1d1;
+    --border-color: #555;
+    --button-active-bg: #d1d1d1;
+    --button-active-text: #2b2b2b;
+}
+
+.genie-dialog {
+    
+    margin:10px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    color: var(--text-color);
+    position: relative;
+}
+
+.textbox {
+    margin: 0px auto;
+    max-width: 400px;
+    background-color: var(--background-color);
+    height: 150px; /* Auto height to adapt to content */
+    max-height: 200px; /* Limit the maximum height to avoid excessive growth */
+   
+    overflow-wrap: break-word; /* Ensure long words wrap */
+    overflow-y: auto; /* Scroll vertically if content exceeds max-height */
+    white-space: normal; /* Prevent text from being in one line */
+    padding: 10px; /* Adds inner padding for readability */
+    font-size: 16px; /* Adjust font size for better display */
+    border: 0px solid var(--border-color); /* Use border color variable */
+    border-radius: 8px 8px 0px 0px;
+}
+
+.textbox::-webkit-scrollbar {
+    display: none;
+}
+
+.lottie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+
+.genie-dialog .btn {
+    margin: 0px auto;
+    max-width: 400px;
+    text-align: center;
+    padding: 0px 2px;
+    border-radius: 0px 0px 8px 8px;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: var(--button-active-bg);
+    color: var(--button-active-text);
+}
+
+/* Responsive */
+@media (max-width: 899px) {
+    .genie-dialog {
+        max-width: 200px;
+    }
+}
